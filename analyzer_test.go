@@ -34,7 +34,7 @@ func TestAnalyzer_All(t *testing.T) {
 
 	limitParam := spec.QueryParam("limit").Typed("integer", "int32")
 	limitParam.Extensions = spec.Extensions(map[string]interface{}{})
-	limitParam.Extensions.Add("go-name", "Limit")
+	limitParam.Extensions.Add("x-go-name", "Limit")
 
 	skipParam := spec.QueryParam("skip").Typed("integer", "int32")
 	pi := spec.PathItem{}
@@ -919,7 +919,7 @@ func prepareTestParamsAuth() *Spec {
 
 	limitParam := spec.QueryParam("limit").Typed("integer", "int32")
 	limitParam.Extensions = spec.Extensions(map[string]interface{}{})
-	limitParam.Extensions.Add("go-name", "Limit")
+	limitParam.Extensions.Add("x-go-name", "Limit")
 
 	skipParam := spec.QueryParam("skip").Typed("integer", "int32")
 	pi := spec.PathItem{}
@@ -984,7 +984,7 @@ func prepareTestParamsValid() *Spec {
 
 	limitParam := spec.QueryParam("limit").Typed("integer", "int32")
 	limitParam.Extensions = spec.Extensions(map[string]interface{}{})
-	limitParam.Extensions.Add("go-name", "Limit")
+	limitParam.Extensions.Add("x-go-name", "Limit")
 
 	skipParam := spec.QueryParam("skip").Typed("integer", "int32")
 	pi := spec.PathItem{}

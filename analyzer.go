@@ -636,8 +636,7 @@ func mapKeyFromParam(param *spec.Parameter) string {
 }
 
 func fieldNameFromParam(param *spec.Parameter) string {
-	// TODO: this should be x-go-name
-	if nm, ok := param.Extensions.GetString("go-name"); ok {
+	if nm, ok := param.Extensions.GetString("x-go-name"); ok {
 		return nm
 	}
 
